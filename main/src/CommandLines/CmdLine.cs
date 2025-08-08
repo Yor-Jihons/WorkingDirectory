@@ -8,32 +8,37 @@ namespace WorkingDirectory.CommandLines
     {
         public static CmdLine Create( string[] args )
         {
-            ProcessTypes type = ProcessTypes.Replacement;
-            string definitionFilePath = "";
+            ProcessTypes type = ProcessTypes.Unknown;
             var sc = StringComparison.OrdinalIgnoreCase;
-            foreach( var arg in args )
+
+            string cmd = args.Length > 1 ? args[0] : "";
+            if (cmd.Equals("LOAD", sc))
             {
-                if( arg.Equals( "--help", sc ) || arg.Equals( "-h", sc ) )
-                {
-                    Console.WriteLine( CmdLine.CreateHelpString() );
-                    return null;
-                }
-                else if( arg.Equals( "--version", sc ) || arg.Equals( "-v", sc ) )
-                {
-                    Console.WriteLine(
-                        System.Diagnostics.FileVersionInfo.GetVersionInfo(
-                            System.Reflection.Assembly.GetExecutingAssembly().Location
-                        ).FileVersion
-                    );
-                    return null;
-                }
-                else if( arg.StartsWith( "--definition=", sc ) || arg.StartsWith( "-d=", sc ) )
-                {
-                    definitionFilePath = SubStringEx( arg );
-                    type = ProcessTypes.Replacement;
-                }
+                // TODO: Implement here.
+                type = ProcessTypes.LaodMode;
             }
-            return new CmdLine(){
+            else if (cmd.Equals("SAVE", sc))
+            {
+                // TODO: Implement here.
+                type = ProcessTypes.SaveMode;
+            }
+            else if (cmd.Equals("--version", sc) || cmd.Equals("-v", sc))
+            {
+                Console.WriteLine(
+                    System.Diagnostics.FileVersionInfo.GetVersionInfo(
+                        System.Reflection.Assembly.GetExecutingAssembly().Location
+                    ).FileVersion
+                );
+                return null;
+            }
+            else
+            {
+                Console.WriteLine(CmdLine.CreateHelpString());
+                return null;
+            }
+
+            return new CmdLine()
+            {
                 ProcessTypes = type
             };
         }
@@ -46,7 +51,7 @@ namespace WorkingDirectory.CommandLines
         /// <returns>The help text.</returns>
         private static string CreateHelpString()
         {
-            string url = @"https://yorroom2.cloudfree.jp/help/en/dotnetversioner.html";
+            // TODO: Implement here.
             var builder = new StringBuilder();
             builder.AppendLine( "[CMD]" );
             builder.AppendLine( "$ DotnetVersioner --info" );
@@ -74,21 +79,7 @@ namespace WorkingDirectory.CommandLines
             builder.AppendLine( "    Show this help." );
             builder.AppendLine( "    (shortened: -h)" );
             builder.AppendLine();
-            builder.AppendLine( $"See also {url}." );
         return builder.ToString();
-        }
-
-        /// <summary>
-        /// Create a string which deleted "...=" from "...=<***>".
-        /// </summary>
-        /// <param name="str">A string</param>
-        /// <returns>A string which deleted "...=" from "...=<***>".</returns>
-        private static string SubStringEx( string str )
-        {
-            int beginPos = str.IndexOf( "=" );
-            beginPos++;
-            string res = str[beginPos..];
-        return res;
         }
     }
 }
