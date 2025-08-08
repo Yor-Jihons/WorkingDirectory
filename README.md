@@ -45,4 +45,4 @@ This library is released under the MIT License.
 ## 7. Contact
 
 Author: Yor-Jihons  
-GitHub: [Sample](https://github.com/Yor-Jihons/Sample)  
+GitHub: [WorkingDirectory](https://github.com/Yor-Jihons/WorkingDirectory)  
