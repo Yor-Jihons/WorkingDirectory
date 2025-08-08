@@ -10,8 +10,8 @@ namespace WorkingDirectory
             var cmdline = CmdLine.Create(args);
             if (cmdline == null) return;
 
-            Console.WriteLine(cmdline.ProcessTypes.ToString());
-            Console.WriteLine(cmdline.Arg);
+            var processor = new Processors.SaveProcessor( cmdline.Arg );
+            processor.Run();
         }
     }
 }
