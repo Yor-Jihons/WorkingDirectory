@@ -5,9 +5,8 @@ namespace WorkingDirectory.CommandLines
     /// </summary>
     public enum ProcessTypes
     {
-        DefGeneration = 0,
-        InfoShow,
-        ListSdksShow,
-        Replacement
+        Unknown = 0,
+        SaveMode = 1,
+        LaodMode = 2
     }
 }
