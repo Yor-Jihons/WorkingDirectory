@@ -7,10 +7,11 @@ namespace WorkingDirectory
     {
         static void Main(string[] args)
         {
-            var cmdline = CmdLine.Create( args );
-            if( cmdline == null ) return;
+            var cmdline = CmdLine.Create(args);
+            if (cmdline == null) return;
 
-            Console.WriteLine( cmdline.ProcessTypes.ToString() );
+            var processor = new Processors.SaveProcessor( cmdline.Arg );
+            processor.Run();
         }
     }
 }
