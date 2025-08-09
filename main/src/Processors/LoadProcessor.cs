@@ -6,9 +6,10 @@ namespace WorkingDirectory.Processors
 {
     public class LoadProcessor(string arg) : IProcessor
     {
-        public void Run( List<string> history )
+        public void Run(List<string> history)
         {
             Console.WriteLine(" arg = " + ToIndex(Arg, null));
+            // TODO: Implement here.
         }
 
         private string Arg { get; set; } = arg;

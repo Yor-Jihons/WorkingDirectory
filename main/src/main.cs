@@ -1,5 +1,7 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
+using System.Reflection;
 using WorkingDirectory.CommandLines;
 
 namespace WorkingDirectory
@@ -11,10 +13,11 @@ namespace WorkingDirectory
             var cmdline = CmdLine.Create(args);
             if (cmdline == null) return;
 
-            string filepath = "workingdirectory.xml";
+            var dirPath = Directory.GetParent(Assembly.GetExecutingAssembly().Location).FullName;
+            string filepath = Path.Join(dirPath, "workingdirectory.xml");
 
-            var processor = new Processors.SaveProcessor(cmdline.Arg);
-            var history = Histories.History.Load( filepath );
+            var processor = Processors.ProcessorCreator.Create(cmdline.ProcessType, cmdline.Arg);
+            var history = Histories.History.Load(filepath);
             processor.Run(history.Paths);
             Histories.History.Save( history, filepath );
         }
