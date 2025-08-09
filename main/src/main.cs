@@ -11,9 +11,12 @@ namespace WorkingDirectory
             var cmdline = CmdLine.Create(args);
             if (cmdline == null) return;
 
-            var processor = new Processors.SaveProcessor( cmdline.Arg );
-            var history = new List<string>(); // TODO: Implement here.
-            processor.Run(history);
+            string filepath = "workingdirectory.xml";
+
+            var processor = new Processors.SaveProcessor(cmdline.Arg);
+            var history = Histories.History.Load( filepath );
+            processor.Run(history.Paths);
+            Histories.History.Save(history, filepath );
         }
     }
 }
