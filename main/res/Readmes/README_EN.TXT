@@ -1,11 +1,11 @@
-<PRODUCT>
+WorkingDirectory
 ----------------------------
 
-Version: <PRODUCT> 1.0.0
+Version: WorkingDirectory 1.0.0
 Author : Yor-Jihons
 
 Reason :
-  <REASON>
+  To recover the current-directory path.
 
 Install:
   Just unpack this zip-file.
@@ -15,4 +15,4 @@ System requirements:
 
 Development environment:
   Windows 11
-  C#.NET (.NET6)
+  C#.NET (.NET8)

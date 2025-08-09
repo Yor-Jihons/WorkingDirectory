@@ -1,15 +1,15 @@
 -+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
-* <PRODUCT>
+* WorkingDirectory
 -+-+-+-+-+-+-+-+-+-+-+-+--+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
 
-   バージョン: <PRODUCT> 1.0.0
+   バージョン: WorkingDirectory 1.0.0
       著作者 : Yor-Jihons
 
          用途:
-               <REASON>
+               To recover the current-directory path.
 
   できること :
-               <WHAT_YOU_CAN>
+               * To recover the current-directory path.
 
 インストール :
                このzipファイルを解凍すれば完了
@@ -19,5 +19,5 @@
 
     開発環境 :
                @ Windows 11
-               @ C#.NET (.NET6)
+               @ C#.NET (.NET8)
 
