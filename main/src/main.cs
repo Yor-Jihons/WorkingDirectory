@@ -11,7 +11,7 @@ namespace WorkingDirectory
             if (cmdline == null) return;
 
             var processor = new Processors.SaveProcessor( cmdline.Arg );
-            processor.Run();
+            processor.Run(null);
         }
     }
 }
