@@ -4,10 +4,13 @@ namespace WorkingDirectory.ExtensionMethods
 {
     public static class ListExtensionMethod
     {
-        public static bool AddItem( this List<string> items, string item )
+        public static void AddItem( this List<string> items, string item )
         {
+            if (items.Count > 10)
+            {
+                items.RemoveRange(0, 10 - (items.Count - 1));
+            }
             items.Add(item);
-            return true; // TODO: Implement here.
         }
     }
 }
