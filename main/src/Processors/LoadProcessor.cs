@@ -8,8 +8,8 @@ namespace WorkingDirectory.Processors
     {
         public void Run(List<string> history)
         {
-            Console.WriteLine(" arg = " + ToIndex(Arg, null));
-            // TODO: Implement here.
+            int index = ToIndex(Arg, history);
+            Console.WriteLine(history[index]);
         }
 
         private string Arg { get; set; } = arg;
