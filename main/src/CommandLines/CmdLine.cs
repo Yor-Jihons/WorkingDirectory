@@ -40,12 +40,12 @@ namespace WorkingDirectory.CommandLines
 
             return new CmdLine()
             {
-                ProcessTypes = type,
+                ProcessType = type,
                 Arg = arg
             };
         }
 
-        public CommandLines.ProcessTypes ProcessTypes{ get; private set; }
+        public CommandLines.ProcessTypes ProcessType{ get; private set; }
         public string Arg{ get; private set; }
 
         /// <summary>
