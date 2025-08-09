@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using WorkingDirectory.CommandLines;
 
 namespace WorkingDirectory
@@ -11,7 +12,8 @@ namespace WorkingDirectory
             if (cmdline == null) return;
 
             var processor = new Processors.SaveProcessor( cmdline.Arg );
-            processor.Run(null);
+            var history = new List<string>();
+            processor.Run(history);
         }
     }
 }
