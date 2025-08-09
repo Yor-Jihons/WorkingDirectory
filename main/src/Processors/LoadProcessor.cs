@@ -4,24 +4,21 @@ using System.Collections.Generic;
 
 namespace WorkingDirectory.Processors
 {
-    public class LoadProcessor : IProcessor
+    public class LoadProcessor(string arg) : IProcessor
     {
-        // TODO: Modify the 2nd argmuent.
-        public LoadProcessor( string arg, List<string> history )
-        {
-            this.DirPath = ToDirPath( arg );
-        }
-
         public void Run()
         {
-            Console.WriteLine( " arg = " + this.DirPath );
+            Console.WriteLine(" arg = " + this.Index);
         }
 
-        private string DirPath{ get; set; }
+        private int Index { get; set; } = ToIndex(arg);
 
-        private static string ToDirPath( string arg  )
+        private static int ToIndex(string arg)
         {
-            return arg; // TODO: Modify.
+            if (arg.Equals("HEAD") || arg.Equals("")) return 0;
+            if (arg.Equals("HEAD^")) return 1;
+            if (arg.Equals("HEAD^^")) return 2;
+            throw new Exceptions.InvalidCommandLineArgumentException( arg );
         }
     }
 }
