@@ -12,7 +12,8 @@ namespace WorkingDirectory.Processors
 
         public void Run()
         {
-            Console.WriteLine( " arg = " + this.DirPath );
+            Console.WriteLine(" arg = " + this.DirPath);
+            // TODO: Implement here.
         }
 
         private string DirPath{ get; set; }
