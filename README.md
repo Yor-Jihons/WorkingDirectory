@@ -1,6 +1,6 @@
 # WorkingDirectory
 
-// SUMMARY
+To recover the current-directory path.
 
 ## 1. Requirements
 
