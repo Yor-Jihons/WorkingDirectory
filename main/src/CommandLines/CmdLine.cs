@@ -54,33 +54,24 @@ namespace WorkingDirectory.CommandLines
         /// <returns>The help text.</returns>
         private static string CreateHelpString()
         {
-            // TODO: Implement here.
             var builder = new StringBuilder();
-            builder.AppendLine("[CMD]");
-            builder.AppendLine("$ DotnetVersioner --info");
-            builder.AppendLine("$ DotnetVersioner --list-sdks");
-            builder.AppendLine("$ DotnetVersioner -g [--definition=<FILEPATH>] [--TargetFramework=<VERSION>]");
-            builder.AppendLine("$ DotnetVersioner [--definition=<FILEPATH>] [--TargetFramework=<VERSION>]");
-            builder.AppendLine("$ DotnetVersioner --help");
+            builder.AppendLine("[COMMANDS]");
+            builder.AppendLine("WorkingDirectory save [<DIRECTORY_PATH>]");
+            builder.AppendLine("WorkingDirectory load [\"HEAD\" | \"HEAD^\" | \"HEAD^^\"]");
+            builder.AppendLine("WorkingDirectory --help");
+            builder.AppendLine("WorkingDirectory --version");
             builder.AppendLine();
             builder.AppendLine("[ARGUMENTS]");
-            builder.AppendLine("  --info:");
-            builder.AppendLine("    Show the info as \"dotnet --info\".");
-            builder.AppendLine("    (shortened: -i)");
-            builder.AppendLine("  --list-sdks:");
-            builder.AppendLine("    Show the info as \"dotnet --list-sdks\".");
-            builder.AppendLine("    (shortened: -l)");
-            builder.AppendLine("  -g:");
-            builder.AppendLine("    Create the xml file as definition file.");
-            builder.AppendLine("  --definition=<FILEPATH>:");
-            builder.AppendLine("    Pass the xml file as the definition file.");
-            builder.AppendLine("    (shortened: -d=<FILEPATH>)");
-            builder.AppendLine("  --TargetFramework=<VERSION>:");
-            builder.AppendLine("    Pass the target framewrok.");
-            builder.AppendLine("    (shortened: -t=<VERSION>)");
-            builder.AppendLine("  --help:");
+            builder.AppendLine("<DIRECTORY_PATH>:");
+            builder.AppendLine("    The directory path.");
+            builder.AppendLine("\"HEAD\":");
+            builder.AppendLine("    The latest directory path you set with this program.");
+            builder.AppendLine("--help:");
             builder.AppendLine("    Show this help.");
-            builder.AppendLine("    (shortened: -h)");
+            builder.AppendLine("    (Shortened: -h)");
+            builder.AppendLine("--version:");
+            builder.AppendLine("    Show this version.");
+            builder.AppendLine("    (Shortened: -v)");
             builder.AppendLine();
             return builder.ToString();
         }
