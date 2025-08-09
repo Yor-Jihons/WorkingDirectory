@@ -16,7 +16,7 @@ namespace WorkingDirectory
             var processor = new Processors.SaveProcessor(cmdline.Arg);
             var history = Histories.History.Load( filepath );
             processor.Run(history.Paths);
-            Histories.History.Save(history, filepath );
+            Histories.History.Save( history, filepath );
         }
     }
 }
