@@ -15,9 +15,9 @@ namespace WorkingDirectory.Processors
 
         private static int ToIndex(string arg, List<string> history)
         {
-            if (arg.Equals("HEAD") || arg.Equals("")) return 0;
-            if (arg.Equals("HEAD^")) return 1;
-            if (arg.Equals("HEAD^^")) return 2;
+            if (arg.Equals("HEAD") || arg.Equals("")) return history.Count - 1;
+            if (arg.Equals("HEAD^")) return history.Count - 2;
+            if (arg.Equals("HEAD^^")) return history.Count - 3;
             throw new Exceptions.InvalidCommandLineArgumentException(arg);
         }
     }
