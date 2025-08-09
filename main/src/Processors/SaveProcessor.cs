@@ -1,15 +1,15 @@
 using System;
 using System.IO;
 using System.Collections.Generic;
+using WorkingDirectory.ExtensionMethods;
 
 namespace WorkingDirectory.Processors
 {
     public class SaveProcessor(string arg) : IProcessor
     {
-        public void Run( List<string> history )
+        public void Run(List<string> history)
         {
-            Console.WriteLine(" arg = " + this.DirPath);
-            // TODO: Implement here.
+            history.AddItem(this.DirPath);
         }
 
         private string DirPath { get; set; } = ToDirPath(arg);
