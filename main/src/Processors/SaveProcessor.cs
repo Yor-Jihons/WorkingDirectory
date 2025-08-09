@@ -1,22 +1,18 @@
 using System;
 using System.IO;
+using System.Collections.Generic;
 
 namespace WorkingDirectory.Processors
 {
-    public class SaveProcessor : IProcessor
+    public class SaveProcessor(string arg) : IProcessor
     {
-        public SaveProcessor( string arg )
-        {
-            this.DirPath = ToDirPath( arg );
-        }
-
-        public void Run()
+        public void Run( List<string> history )
         {
             Console.WriteLine(" arg = " + this.DirPath);
             // TODO: Implement here.
         }
 
-        private string DirPath{ get; set; }
+        private string DirPath { get; set; } = ToDirPath(arg);
 
         private static string ToDirPath( string arg )
         {

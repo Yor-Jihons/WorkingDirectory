@@ -6,19 +6,19 @@ namespace WorkingDirectory.Processors
 {
     public class LoadProcessor(string arg) : IProcessor
     {
-        public void Run()
+        public void Run( List<string> history )
         {
-            Console.WriteLine(" arg = " + this.Index);
+            Console.WriteLine(" arg = " + ToIndex(Arg, null));
         }
 
-        private int Index { get; set; } = ToIndex(arg);
+        private string Arg { get; set; } = arg;
 
-        private static int ToIndex(string arg)
+        private static int ToIndex(string arg, List<string> history)
         {
             if (arg.Equals("HEAD") || arg.Equals("")) return 0;
             if (arg.Equals("HEAD^")) return 1;
             if (arg.Equals("HEAD^^")) return 2;
-            throw new Exceptions.InvalidCommandLineArgumentException( arg );
+            throw new Exceptions.InvalidCommandLineArgumentException(arg);
         }
     }
 }
