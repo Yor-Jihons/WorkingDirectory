@@ -17,6 +17,10 @@ namespace WorkingDirectory.Processors
             {
                 return new SaveProcessor(arg);
             }
+            else if (type == CommandLines.ProcessTypes.ListMode)
+            {
+                return new ListProcessor();
+            }
             else
             {
                 return null;

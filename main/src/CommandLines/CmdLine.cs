@@ -23,6 +23,11 @@ namespace WorkingDirectory.CommandLines
                 type = ProcessTypes.SaveMode;
                 arg = args.Length >= 2 ? args[1] : ".";
             }
+            else if (cmd.Equals("LIST", sc))
+            {
+                type = ProcessTypes.ListMode;
+                arg = "";
+            }
             else if (cmd.Equals("--version", sc) || cmd.Equals("-v", sc))
             {
                 Console.WriteLine(
@@ -56,6 +61,7 @@ namespace WorkingDirectory.CommandLines
         {
             var builder = new StringBuilder();
             builder.AppendLine("[COMMANDS]");
+            builder.AppendLine("WorkingDirectory list");
             builder.AppendLine("WorkingDirectory save [<DIRECTORY_PATH>]");
             builder.AppendLine("WorkingDirectory load [\"HEAD\" | \"HEAD^\" | \"HEAD^^\"]");
             builder.AppendLine("WorkingDirectory --help");

@@ -7,6 +7,7 @@ namespace WorkingDirectory.CommandLines
     {
         Unknown = 0,
         SaveMode = 1,
-        LaodMode = 2
+        LaodMode = 2,
+        ListMode = 3
     }
 }
