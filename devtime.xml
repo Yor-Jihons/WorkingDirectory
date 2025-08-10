@@ -8,10 +8,10 @@
   </designphase>
   <developphase>
     <hours>1</hours>
-    <minutes>50</minutes>
+    <minutes>51</minutes>
   </developphase>
   <testphase>
-    <hours>0</hours>
-    <minutes>44</minutes>
+    <hours>1</hours>
+    <minutes>17</minutes>
   </testphase>
 </developtime>
