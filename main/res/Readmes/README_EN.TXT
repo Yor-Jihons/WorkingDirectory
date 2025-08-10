@@ -1,7 +1,7 @@
 WorkingDirectory
 ----------------------------
 
-Version: WorkingDirectory 1.0.0
+Version: WorkingDirectory 2.0.0
 Author : Yor-Jihons
 
 Reason :
