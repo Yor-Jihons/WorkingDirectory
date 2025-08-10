@@ -33,6 +33,46 @@ public class UnitTest1
         Assert.Equal(ProcessTypes.LaodMode, cmdline5.ProcessType);
         Assert.Equal("HEAD", cmdline5.Arg);
 
+        string[] args6 = ["load", "HEAD"];
+        var cmdline6 = CmdLine.Create(args6);
+        Assert.Equal(ProcessTypes.LaodMode, cmdline6.ProcessType);
+        Assert.Equal("HEAD", cmdline6.Arg);
+
+        string[] args7 = ["load", "HEAD^"];
+        var cmdline7 = CmdLine.Create(args7);
+        Assert.Equal(ProcessTypes.LaodMode, cmdline7.ProcessType);
+        Assert.Equal("HEAD^", cmdline7.Arg);
+
+        string[] args8 = ["load", "HEAD^^"];
+        var cmdline8 = CmdLine.Create(args8);
+        Assert.Equal(ProcessTypes.LaodMode, cmdline8.ProcessType);
+        Assert.Equal("HEAD^^", cmdline8.Arg);
+    }
+    
+    [Fact]
+    public void Test2()
+    {
+        string[] args1 = [ "--help" ];
+        var cmdline1 = CmdLine.Create(args1);
+        Assert.Null(cmdline1);
+
+        string[] args2 = [ "-h" ];
+        var cmdline2 = CmdLine.Create(args2);
+        Assert.Null(cmdline2);
+
+        string[] args3 = [ "--version" ];
+        var cmdline3 = CmdLine.Create(args3);
+        Assert.Null(cmdline3);
+
+        string[] args4 = [ "-v" ];
+        var cmdline4 = CmdLine.Create(args4);
+        Assert.Null(cmdline4);
+
+        string[] args5 = ["load"];
+        var cmdline5 = CmdLine.Create(args5);
+        Assert.Equal(ProcessTypes.LaodMode, cmdline5.ProcessType);
+        Assert.Equal("HEAD", cmdline5.Arg);
+
         string[] args6 = ["load", "HEAD" ];
         var cmdline6 = CmdLine.Create(args6);
         Assert.Equal(ProcessTypes.LaodMode, cmdline6.ProcessType);
