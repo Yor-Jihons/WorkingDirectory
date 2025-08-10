@@ -125,7 +125,7 @@ public class CmdLineTest
         //string[] args8 = [ "load", "C:\\sample\\dir2" ];
         //var cmdline8 = CmdLine.Create(args8);
         //Assert.Null(cmdline8);
-        
+
         string[] args9 = [];
         var cmdline9 = CmdLine.Create(args9);
         Assert.Null(cmdline9);

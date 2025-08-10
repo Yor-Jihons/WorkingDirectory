@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Reflection;
 using WorkingDirectory.CommandLines;
+using WorkingDirectory.ExtensionMethods;
 
 namespace WorkingDirectory
 {
@@ -19,7 +20,7 @@ namespace WorkingDirectory
             var processor = Processors.ProcessorCreator.Create(cmdline.ProcessType, cmdline.Arg);
             var history = Histories.History.Load(filepath);
             processor.Run(history.Paths);
-            Histories.History.Save( history, filepath );
+            Histories.History.Save(history, filepath);
         }
     }
 }
