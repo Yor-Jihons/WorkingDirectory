@@ -99,7 +99,7 @@ public class UnitTest1
         string[] args2 = ["eat", "test"];
         var cmdline2 = CmdLine.Create(args2);
         Assert.Null(cmdline2);
-        
+
         // TODO: Modify the tests.
 
         //string[] args3 = [ "save", "HEAD" ];
@@ -125,5 +125,9 @@ public class UnitTest1
         //string[] args8 = [ "load", "C:\\sample\\dir2" ];
         //var cmdline8 = CmdLine.Create(args8);
         //Assert.Null(cmdline8);
+        
+        string[] args9 = [];
+        var cmdline9 = CmdLine.Create(args9);
+        Assert.Null(cmdline9);
     }
 }
