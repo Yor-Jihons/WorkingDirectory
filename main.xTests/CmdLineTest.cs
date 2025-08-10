@@ -3,7 +3,7 @@ using WorkingDirectory.CommandLines;
 
 namespace main.xTests;
 
-public class UnitTest1
+public class CmdLineTest
 {
     [Fact]
     public void Test1()
