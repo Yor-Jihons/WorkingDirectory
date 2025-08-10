@@ -47,6 +47,16 @@ public class CmdLineTest
         var cmdline8 = CmdLine.Create(args8);
         Assert.Equal(ProcessTypes.LaodMode, cmdline8.ProcessType);
         Assert.Equal("HEAD^^", cmdline8.Arg);
+
+        string[] args9 = ["list"];
+        var cmdline9 = CmdLine.Create(args9);
+        Assert.Equal(ProcessTypes.ListMode, cmdline9.ProcessType);
+        Assert.Equal("", cmdline9.Arg);
+
+        string[] args10 = ["list", ""];
+        var cmdline10 = CmdLine.Create(args10);
+        Assert.Equal(ProcessTypes.ListMode, cmdline10.ProcessType);
+        Assert.Equal("", cmdline10.Arg);
     }
 
     [Fact]
