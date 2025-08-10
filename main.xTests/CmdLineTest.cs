@@ -17,10 +17,15 @@ public class UnitTest1
         var cmdline2 = CmdLine.Create(args2);
         Assert.Equal(ProcessTypes.SaveMode, cmdline2.ProcessType);
         Assert.Equal(".", cmdline2.Arg);
-        
-        string[] args3 = ["save", ".." ];
+
+        string[] args3 = ["save", ".."];
         var cmdline3 = CmdLine.Create(args3);
-        Assert.Equal( ProcessTypes.SaveMode, cmdline3.ProcessType);
-        Assert.Equal( "..", cmdline3.Arg );
+        Assert.Equal(ProcessTypes.SaveMode, cmdline3.ProcessType);
+        Assert.Equal("..", cmdline3.Arg);
+        
+        string[] args4 = ["save", "C:\\sample\\dir1" ];
+        var cmdline4 = CmdLine.Create(args4);
+        Assert.Equal( ProcessTypes.SaveMode, cmdline4.ProcessType);
+        Assert.Equal( "C:\\sample\\dir1", cmdline4.Arg );
     }
 }
