@@ -56,7 +56,7 @@ namespace WorkingDirectory.CommandLines
         {
             var builder = new StringBuilder();
             builder.AppendLine("[COMMANDS]");
-            builder.AppendLine("WorkingDirectory save [<DIRECTORY_PATH>]");
+            builder.AppendLine("WorkingDirectory list");
             builder.AppendLine("WorkingDirectory save [<DIRECTORY_PATH>]");
             builder.AppendLine("WorkingDirectory load [\"HEAD\" | \"HEAD^\" | \"HEAD^^\"]");
             builder.AppendLine("WorkingDirectory --help");
