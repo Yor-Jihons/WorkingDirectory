@@ -7,7 +7,7 @@ namespace WorkingDirectory.Processors
 {
     public class ListProcessor : IProcessor
     {
-        private readonly string[] _list = ["HEAD", "HEAD^", "HEAD^^"];
+        private readonly string[] _list = ["HEAD  ", "HEAD^ ", "HEAD^^"];
         public void Run(List<string> history)
         {
             int loopCount = Math.Min(_list.Length, history.Count);
@@ -16,7 +16,7 @@ namespace WorkingDirectory.Processors
             {
                 string tag = _list[i];
                 string path = history[history.Count - 1 - i];
-                Console.WriteLine($"\"{tag}\": {path}");
+                Console.WriteLine($"{tag}: {path}");
             }
         }
     }
