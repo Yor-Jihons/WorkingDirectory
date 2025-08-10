@@ -13,9 +13,13 @@ namespace WorkingDirectory.Processors
             {
                 return new LoadProcessor(arg);
             }
-            else
+            else if (type == CommandLines.ProcessTypes.SaveMode)
             {
                 return new SaveProcessor(arg);
+            }
+            else
+            {
+                return null;
             }
         }
     }
