@@ -6,9 +6,10 @@ namespace WorkingDirectory.ExtensionMethods
     {
         public static void AddItem( this List<string> items, string item )
         {
-            if (items.Count > 10)
+            const int max = 3;
+            if (items.Count > max)
             {
-                items.RemoveRange(0, 10 - (items.Count - 1));
+                items.RemoveRange(0, max - (items.Count - 1));
             }
             items.Add(item);
         }
