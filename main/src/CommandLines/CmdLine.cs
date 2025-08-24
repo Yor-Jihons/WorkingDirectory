@@ -28,6 +28,11 @@ namespace WorkingDirectory.CommandLines
                 type = ProcessTypes.ListMode;
                 arg = "";
             }
+            else if (cmd.Equals("CEAR", sc))
+            {
+                type = ProcessTypes.CearMode;
+                arg = "";
+            }
             else if (cmd.Equals("--version", sc) || cmd.Equals("-v", sc))
             {
                 Console.WriteLine(
