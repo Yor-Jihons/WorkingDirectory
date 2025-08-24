@@ -48,5 +48,9 @@ public class ProcessorCreatorTest
         var processor10 = ProcessorCreator.Create(ProcessTypes.ListMode, "abc");
         Assert.NotNull(processor10);
         Assert.IsType<ListProcessor>(processor10);
+
+        var processor11 = ProcessorCreator.Create(ProcessTypes.CearMode, "");
+        Assert.NotNull(processor11);
+        Assert.IsType<ClearProcessor>(processor11);
     }
 }
