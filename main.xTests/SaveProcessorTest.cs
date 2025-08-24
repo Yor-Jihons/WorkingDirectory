@@ -12,8 +12,8 @@ public class SaveProcessorTest
     [Fact]
     public void Test1()
     {
-        string? curDirPath = System.IO.Path.GetDirectoryName(Environment.CurrentDirectory);
-        string? curDirParentPath = System.IO.Path.GetDirectoryName(System.IO.Path.GetDirectoryName(Environment.CurrentDirectory));
+        string? curDirPath = Environment.CurrentDirectory;
+        string? curDirParentPath = System.IO.Path.GetDirectoryName(curDirPath);
 
         var processor1 = new SaveProcessor(".");
         List<string> list1 = ["C:\\sample", "C:\\test"];
