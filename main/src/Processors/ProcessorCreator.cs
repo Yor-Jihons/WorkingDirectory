@@ -21,6 +21,10 @@ namespace WorkingDirectory.Processors
             {
                 return new ListProcessor();
             }
+            else if (type == CommandLines.ProcessTypes.CearMode)
+            {
+                return new ClearProcessor();
+            }
             else
             {
                 return null;
