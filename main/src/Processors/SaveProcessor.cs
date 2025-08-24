@@ -19,10 +19,10 @@ namespace WorkingDirectory.Processors
             var sc = StringComparison.OrdinalIgnoreCase;
             if( arg.Equals( ".", sc ) )
             {
-                return System.IO.Path.GetDirectoryName( Environment.CurrentDirectory );
+                return Environment.CurrentDirectory;
             }else if( arg.Equals( "..", sc ) )
             {
-                return System.IO.Path.GetDirectoryName( System.IO.Path.GetDirectoryName( Environment.CurrentDirectory ) );
+                return System.IO.Path.GetDirectoryName( Environment.CurrentDirectory );
             }
         return arg;
         }
