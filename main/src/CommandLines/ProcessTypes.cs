@@ -8,6 +8,7 @@ namespace WorkingDirectory.CommandLines
         Unknown = 0,
         SaveMode = 1,
         LaodMode = 2,
-        ListMode = 3
+        ListMode = 3,
+        CearMode = 4
     }
 }

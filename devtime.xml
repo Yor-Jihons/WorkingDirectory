@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <developtime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <title>WorkingDirectory</title>
-  <lasttime>2</lasttime>
+  <lasttime>1</lasttime>
   <designphase>
     <hours>0</hours>
     <minutes>0</minutes>
   </designphase>
   <developphase>
-    <hours>2</hours>
-    <minutes>59</minutes>
+    <hours>3</hours>
+    <minutes>3</minutes>
   </developphase>
   <testphase>
     <hours>1</hours>
-    <minutes>50</minutes>
+    <minutes>58</minutes>
   </testphase>
 </developtime>
