@@ -6,7 +6,7 @@
     <AssemblyName>WorkingDirectory</AssemblyName>
     <ApplicationIcon>.\res\Icons\appicon2.ico</ApplicationIcon>
     <DebugType Condition="'$(Configuration)' != 'Debug'">none</DebugType>
-    <Version>3.0.0</Version>
+    <Version>3.0.1</Version>
     <Copyright>Yor-Jihons</Copyright>
   </PropertyGroup>
 
