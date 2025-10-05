@@ -28,7 +28,7 @@ namespace WorkingDirectory.CommandLines
                 type = ProcessTypes.ListMode;
                 arg = "";
             }
-            else if (cmd.Equals("CEAR", sc))
+            else if (cmd.Equals("CLEAR", sc))
             {
                 type = ProcessTypes.CearMode;
                 arg = "";
